@@ -67,6 +67,8 @@ $(function(){
         $('#tg-correct-questions').text(correct + ' out of ' + total);
         $('#tg-score').text(score);
         $('#tg-msg').addClass(msgClass).show();
+        // Show Feedback
+        $('#tg-feedback').addClass(msgClass).show();
     }
     function resetQuestions(keep) {
         $('li.question-row').removeClass('text-danger').removeClass('text-warning');
