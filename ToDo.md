@@ -3,7 +3,7 @@
 ## Clean HTML:
         "(Correct)" -> ""
         "(Incorrect)" -> ""
-        "<p\><\/p>" -> ""
-        ": Correct<\/p>" -> ""
-        ": Incorrect<\/p>" -> ""
-        "<p\>Question " -> "# Question"
+        "<p><\/p>" -> ""
+        ": Correct</p>" -> ""
+        ": Incorrect</p>" -> ""
+        "<p>Question " -> "# Question"
