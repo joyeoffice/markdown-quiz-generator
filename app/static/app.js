@@ -74,6 +74,8 @@ $(function(){
         $('li.question-row').removeClass('text-danger').removeClass('text-warning');
         $('i.text-correct').html('');
         $('#tg-msg').removeClass('alert-danger').removeClass('alert-success').removeClass('alert-warning').hide();
+        // Hide Feedback
+        $('#tg-feedback').removeClass('alert-danger').removeClass('alert-success').removeClass('alert-warning').hide();
         if(keep === true) {
             return;
         }
