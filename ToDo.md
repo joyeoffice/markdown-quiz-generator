@@ -1,9 +1,9 @@
 # Markdown Quiz
 
 ## Clean HTML:
-- Replace "(Correct)" -> ""
-- Replace "(Incorrect)" -> ""
-- Replace "<p\><\/p>" -> ""
-- Replace ": Correct<\/p>" -> ""
-- Replace ": Incorrect<\/p>" -> ""
-- Replace "<p\>Question " -> "# Question"
+        "(Correct)" -> ""
+        "(Incorrect)" -> ""
+        "<p\><\/p>" -> ""
+        ": Correct<\/p>" -> ""
+        ": Incorrect<\/p>" -> ""
+        "<p\>Question " -> "# Question"
