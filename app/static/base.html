@@ -1,16 +1,25 @@
 
-<div class="container">
+<div class="container my-2">
     <div class="form-row">
         <div class="container">
-            {{ content |safe }}
+            <div class="row p-0 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg">
+                <div class="container col-xl-10 col-xxl-8 px-2 py-2">
+                    {{ content |safe }}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                        <button id="check-questions" type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Check</button>
+                        <button id="reset-questions" type="button" class="btn btn-outline-secondary btn-lg px-4">Reset All</button>
+                    </div>
+                    <div id="tg-msg" class="alert" role="alert" style="display: none">
+                        <span id="tg-correct-questions"></span> Correct! <br /><b>Rating: <span id="tg-score"></span>%</b>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="tg-msg" class="alert" role="alert" style="display: none">
-        <span id="tg-correct-questions"></span> Correct! <br /><b>Rating: <span id="tg-score"></span>%</b>
-    </div>
+    <div class="b-example-divider"></div>
+
     <div class="row">
-        <button id="check-questions" class="btn btn-lg btn-success">Check</button>
-        <button id="reset-questions" class="btn btn-link">Reset All</button>
+
     </div>
     <script type="text/javascript">{{ javascript |safe }}</script>
 </div>

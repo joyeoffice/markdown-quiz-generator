@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             font-family: sans-serif;
@@ -25,16 +26,16 @@
         @extend .table;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="container">
+<div class="container my-2">
     <div class="form-row">
         <div class="container">
-            <h1>MaxSoft Quiz</h1>
+            <div class="row p-0 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg">
+                <div class="container col-xl-10 col-xxl-8 px-2 py-2">
+                    <h1>MaxSoft Quiz</h1>
 <hr>
 <ol>
 <li>
@@ -67,14 +68,21 @@
 </ul>
 </li>
 </ol>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+                        <button id="check-questions" type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Check</button>
+                        <button id="reset-questions" type="button" class="btn btn-outline-secondary btn-lg px-4">Reset All</button>
+                    </div>
+                    <div id="tg-msg" class="alert" role="alert" style="display: none">
+                        <span id="tg-correct-questions"></span> Correct! <br /><b>Rating: <span id="tg-score"></span>%</b>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id="tg-msg" class="alert" role="alert" style="display: none">
-        <span id="tg-correct-questions"></span> Correct! <br /><b>Rating: <span id="tg-score"></span>%</b>
-    </div>
+    <div class="b-example-divider"></div>
+
     <div class="row">
-        <button id="check-questions" class="btn btn-lg btn-success">Check</button>
-        <button id="reset-questions" class="btn btn-link">Reset All</button>
+
     </div>
     <script type="text/javascript">$(function(){
     $('ul.radio-list,ul.checklist,ul.textbox').each(function(i, el){
@@ -152,6 +160,8 @@
         $('li.question-row').removeClass('text-danger').removeClass('text-warning');
         $('i.text-correct').html('');
         $('#tg-msg').removeClass('alert-danger').removeClass('alert-success').removeClass('alert-warning').hide();
+        // Hide Feedback
+        $('#tg-feedback').removeClass('alert-danger').removeClass('alert-success').removeClass('alert-warning').hide();
         if(keep === true) {
             return;
         }
@@ -163,5 +173,6 @@
 
 });</script>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

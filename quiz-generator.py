@@ -16,7 +16,7 @@ OUTPUT_FOLDER = 'generated-quizzes'
 def render_test(file_name: str, markdown_content: str) -> None:
     """Render quiz in Markdown format to HTML."""
 
-    extensions = ["tables", "app.extensions.checkbox", "app.extensions.radio", "app.extensions.textbox"]
+    extensions = ["tables", "app.extensions.checkbox", "app.extensions.radio", "app.extensions.textbox", "pymdownx.b64"]
 
     html = markdown.markdown(markdown_content, extensions=extensions, output_format="html5")
     env = Environment(loader=PackageLoader('app', 'static'), autoescape=select_autoescape(['html', 'xml']))
